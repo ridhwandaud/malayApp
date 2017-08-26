@@ -22,9 +22,9 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new ColorsFragment();
-        } else if (position == 1){
             return new NumbersFragment();
+        } else if (position == 1){
+            return new ColorsFragment();
         }else if (position == 2){
             return new FamilyFragment();
         }else {
