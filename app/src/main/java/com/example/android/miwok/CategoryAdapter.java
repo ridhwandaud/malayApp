@@ -26,7 +26,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         } else if (position == 1){
             return new NumbersFragment();
         }else if (position == 2){
-            return new NumbersFragment();
+            return new FamilyFragment();
         }else {
             return new PhrasesFragment();
         }
