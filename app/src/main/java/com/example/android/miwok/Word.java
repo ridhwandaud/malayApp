@@ -16,6 +16,12 @@ public class Word {
     /** Miwok translation for the word */
     private String mMalayTranslation;
 
+    /** Image resource ID for the word */
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+
+    /** Constant value that represents no image was provided for this word */
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     /**
      * Create a new Word object.
      *
@@ -28,9 +34,12 @@ public class Word {
         mMalayTranslation = malayTranslation;
     }
 
-    /**
-     * Get the default translation of the word.
-     */
+    public Word(String defaultTranslation, String malayTranslation, int imageResourceId) {
+        mDefaultTranslation = defaultTranslation;
+        mMalayTranslation = malayTranslation;
+        mImageResourceId = imageResourceId;
+    }
+
     public String getDefaultTranslation() {
         return mDefaultTranslation;
     }
@@ -42,4 +51,11 @@ public class Word {
         return mMalayTranslation;
     }
 
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
+
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
 }
